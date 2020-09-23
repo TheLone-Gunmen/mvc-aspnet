@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Listando Alunos";
+}
+<h1>@ViewData["Title"]</h1>
+<ul>
+    @foreach (var std in ViewData["students"] as IList<Movie.Controllers.Student>)
+    {
+    <li>
+        @std.StudentName - @std.Age
+    </li>
+    }
+</ul>
